@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: coral;
+}
+
+.nav.active{
+    display: none;
+}
+.nav{
+    height: 18rem;
+    width:100vw;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logo{
+    display: flex;
+    text-align:center;
+    flex-direction: column;
+    background-image: url(/coral.jpg);
+    width: 90px;
+    height: 90px;
+    margin-bottom:8rem ;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border-radius: 100px;
+    
+}
+
+.logo h1{
+    color: white;
+    text-shadow: 3px 2px rgb(80, 73, 73);
+    margin-top:4.5rem ;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+
+
+.content{
+    position: relative;
+    display: flex;
+
+    justify-content: space-between;
+    width: 75%;
+    height: 13rem;
+    cursor: pointer;
+}
+
+.content div{
+    font-size: 20px;
+    color: white;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.sub-menu{
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    background-color: aliceblue;
+    list-style: none;
+    height: 150px;
+    width: 130px;
+    opacity: 0;
+    top: 3rem;
+    box-shadow: 0 3px 6px 4px rgba(0,0,0,.1);
+    border-radius:10px ;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.sub-menu.active{
+    opacity:1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.sub-menu li{
+    margin-bottom: 5px;
+}
+
+.sub-menu li a{
+    text-decoration: none;
+}
+
+
+
+.second{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    right: -100vw;
+    transition: all 800ms ease-in-out;
+}
+
+.second.active{
+    right: 0;
+    background-color: rgba(209, 207, 207, 0.418);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    top: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 8rem;
+}
+.close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: absolute;
+    right: 70px;
+    top: 50px;
+    height: 2rem;
+    width: 5rem;
+    background-color: beige;
+}
+
+.container div {
+    display: flex;
+    place-content: center;
+    font-size: 2.5rem;
+    color: rgb(96, 173, 173);
+    height: 350px;
+    width: 250px;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 50px;
+    background-color: rgba(206, 200, 200, 0.486);
+}
